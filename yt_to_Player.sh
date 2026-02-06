@@ -1,5 +1,5 @@
 #!/bin/bash
-cd
+cd /tmp/
 if ! [[ ls -d */ | grep "trash" ]]; then
   mkdir trash
  else
