@@ -38,7 +38,7 @@ if  [[ ls -d /tmp/* | grep "trash" ]]; then
  else
   echo " Trash Folder Already Exist!!"
 fi
-echo -e "\e[36;1;40m {1} Youtube Audio Download\n \e[0m"
+echo -e "\e[36;1;40m {1} Youtube Audio Download & Play\n \e[0m"
 sudo chmod -R u+rw /tmp/trash/
 #Wrap it inside until loop to validate choice
 read -r -p  "   Enter Choice: " Choice1
