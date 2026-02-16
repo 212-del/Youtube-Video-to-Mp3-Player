@@ -38,20 +38,9 @@ if  [[ ls -d /tmp/* | grep "trash" ]]; then
  else
   echo " Trash Folder Already Exist!!"
 fi
-echo -e "\e[36;1;40m {1} Youtube Audio Download & Play\n \e[0m"
 sudo chmod -R u+rw /tmp/trash/
-#Wrap it inside until loop to validate choice
-read -r -p  "   Enter Choice: " Choice1
-#Wrap it inside until loop to validate link
 read -r -p "Enter the youtube video link: " link
-#Wrap it inside until loop to validate filename
 read -r -p "Enter the filename: " filename
 echo "If you are gettin any error do update your yt-dlp"
-case ${Choice1} in
- 1)
 yt-dlp  --cookies-from-browser brave --js-runtimes node -x --audio-format mp3 -o "/tmp/trash/${filename}.%(ext)s"  ${link} ;  mpv || ffplay /tmp/trash/${filename}.mp3
- ;;
- *)
-  echo "Kindly choose the correct choice"
-esac
 
